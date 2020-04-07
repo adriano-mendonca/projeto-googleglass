@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Tudo Sobre Google Glass</title>
+    <link rel="stylesheet" href="_css/estilo.css">
+    <link rel="stylesheet" href="_css/media.css"> <!--Ligação com o arquivo css-->    
+</head>
+<script src="_javascript/funcoes.js"></script>
+<body>
+    <div id="interface">
+        <!--Cabeçalho-->
+        <header id="cabecalho">
+            <hgroup>
+                <h1>Google Glass</h1>
+                <h2>A revolução do Google está chegando</h2>
+            </hgroup>
+
+            <img id="icone" src="_imagens/multimidia.png">
+            <!--Fim Cabeçalho-->
+
+            <!--Menu-->
+            <nav id="menu"> <!--Menu de navegação-->
+                <h1>Menu Principal</h1>
+                <ul>
+                    <li  onmousemove="mudaft('_imagens/home.png')" onmouseout="mudaft('_imagens/multimidia.png')"><a href="index.html">Home</a></li>   <!--Listas em ordem (ol) desordem (ul)-->
+                    <li onmousemove="mudaft('_imagens/especificacoes.png')" onmouseout="mudaft('_imagens/multimidia.png')"><a href="specs.html">Especificações</a></li>
+                    <li onmousemove="mudaft('_imagens/fotos.png')" onmouseout="mudaft('_imagens/multimidia.png')"><a href="fotos.html">Fotos</a></li>
+                    <li onmousemove="mudaft('_imagens/multimidia.png')" onmouseout="mudaft('_imagens/multimidia.png')"><a href="multimidia.html">Multimídia</a></li>
+                    <li onmousemove="mudaft('_imagens/contato.png')" onmouseout="mudaft('_imagens/multimidia.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="corpo-full">
+            <article id="noticia-principal">
+                <header id="cabecalho-artigo">
+                    <hgroup>
+                        <h3>Glass > Multimídia</h3>
+                        <h1>Sons e Vídeos</h1>
+                        <h2>por Adriano Mendonça</h2>
+                        <h3 class="d">Atualizado em 26/Julho/2019</h3>
+                    </hgroup>                
+            </header>
+                <div id="tv-radio">
+                    <audio id="musica" controls="controls">
+                        <source src="_media/Arctics Monkeys - Knee Socks.mp3" type="audio/mpeg"/>
+                    </audio>
+                    <video id="filme" controls="controls" poster="_imagens/video-mini03.jpg">
+                        <source src="_media/getting-started.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </article>
+        </section>
+        <footer id="rodape">
+            <p>Copyright&copy; 2019 - by Adriano Mendonça<br/>
+            <a href="http://facebook.com/adriano.brito.144" target="_blank">Facebook</a> | <a href="http://facebook.com/adriano.brito.144" target="_blank">Twitter</a></p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Tudo Sobre Google Glass</title>
+    <link rel="stylesheet" href="_css/estilo.css"> <!--Ligação com o arquivo css-->   
+    <link rel="stylesheet" href="_css/form.css"> 
+    <script src="_javascript/funcoes.js"></script>
+    <script>
+        function calctotal() {
+            var qtd = parseInt(document.getElementById('cqtd').value)
+            tot = qtd * 1500
+            document.getElementById('ctot').value = tot
+        }
+    </script>
+</head>
+<body>
+    <div id="interface">
+        <!--Cabeçalho-->
+        <header id="cabecalho">
+            <hgroup>
+                <h1>Google Glass</h1>
+                <h2>A revolução do Google está chegando</h2>
+            </hgroup>
+
+            <img id="icone" src="_imagens/contato.png">
+            <!--Fim Cabeçalho-->
+
+            <!--Menu-->
+            <nav id="menu"> <!--Menu de navegação-->
+                <h1>Menu Principal</h1>
+                <ul>
+                    <li  onmousemove="mudaft('_imagens/home.png')" onmouseout="mudaft('_imagens/contato.png')"><a href="index.html">Home</a></li>   <!--Listas em ordem (ol) desordem (ul)-->
+                    <li onmousemove="mudaft('_imagens/especificacoes.png')" onmouseout="mudaft('_imagens/contato.png')"><a href="specs.html">Especificações</a></li>
+                    <li onmousemove="mudaft('_imagens/fotos.png')" onmouseout="mudaft('_imagens/contato.png')"><a href="fotos.html">Fotos</a></li>
+                    <li onmousemove="mudaft('_imagens/multimidia.png')" onmouseout="mudaft('_imagens/contato.png')"><a href="multimidia.html">Multimídia</a></li>
+                    <li onmousemove="mudaft('_imagens/contato.png')" onmouseout="mudaft('_imagens/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="corpo-full">
+            <article id="noticia-principal">
+                <header id="cabecalho-artigo">
+                    <hgroup>
+                        <h3>Fale Conosco > Contato</h3>
+                        <h1>Formulário de Contato</h1>
+                        <h2>por Adriano Mendonça</h2>
+                        <h3 class="d">Atualizado em 26/Julho/2019</h3>
+                    </hgroup>
+                </header>       
+                <form method="POST" id="fcontato" action="mailto:" oninput="calctotal()">
+                    <fieldset id="usuario">
+                        <legend>Identificação do Usuário</legend>
+                            <p><label for="cnome">Nome:</label><input type="text" name="tnome" id="cnome" size="20" maxlength="30" placeholder="Nome Completo"></p>
+                            <p><label for="csenha">Senha:</label><input type="password" name="tsenha" id="csenha" size="8" maxlength="8" placeholder="8 Dígitos"></p>
+                            <p><label for="cmail">Email:</label><input type="email" name="tmail" id="cmail" size="20" maxlength="40" placeholder="@hotmail, @gmail, @outlook..."></p>
+                            <fieldset id="sexo">
+                                <legend>Sexo:</legend>
+                                <input type="radio" name="tsexo" id="cmasc"> <label for="cmasc">Masculino</label><br>
+                                <input type="radio" name="tsexo" id="cfem"> <label for="cfem">Feminino</label>
+                            </fieldset>
+                            <p>Data de Nascimento: <input type="date" name="tdata" id="cdata"></p>
+                    </fieldset>
+                    <fieldset id="endereco">
+                        <legend>Endereço do Usuário</legend>
+                            <p><label for="crua">Logradouro:</label><input type="text" name="trua" id="crua" size="25" maxlength="80" placeholder="Rua, Av, Trav, ..."></p>
+                            <p><label for="cnum">Número:</label><input type="number" name="tnum" id="cnum" min="0" max="99999"></p>
+                            <p><label for="cestado">Estado:</label>
+                            <select name="testado" id="cestado">
+                                <option selected>PI</option>
+                                <option>MA</option>
+                                <option>RN</option>
+                                <option>CE</option>
+                                <option>PB</option>
+                                <option>SE</option>
+                                <option>AL</option>
+                                <option>PE</option>
+                            </select></p>
+                            <p><label for="ccidade">Cidade:</label><input type="text" name="tcidade" id="ccidade" maxlength="40" size="20" placeholder="Sua Cidade" list="cidade"></p>
+                            <datalist id="cidade">
+                                <option value="Teresina"></option>
+                                <option value="Bom Jesus"></option>
+                                <option value="Floriano"></option>
+                            </datalist>
+                    </fieldset>
+                    <fieldset id="mensagem">
+                        <legend>Mensagem do Usuário</legend>
+                            <p><label for="curg">Grau de Urgência:</label>Mín<input type="range" name="turg" id="curg" min="0" max="10" step="1">Max</p>
+                            <p><label for="cmsg">Mensagem:</label><textarea name="tmsg" id="cmsg" cols="20" rows="10" placeholder="Deixe aqui sua mensagem"></textarea></p>
+                    </fieldset>
+                    <fieldset id="quero">
+                        <legend>Quero um Google Glass</legend>
+                            <p><input type="checkbox" name="tped" id="cped" checked><label for="cped">Gostaria de adquirir um Google Glass quando disponível</label></p>
+                            <p><label for="ccor">Cor:</label> <input type="color" name="tcor" id="ccor" value="#ffffff"></p>
+                            <p><label for="cqtd">Quantidade:</label><input type="number" name="tqtd" id="cqtd" min="0" max="5" value="0"></p>
+                            <p><label for="ctot">Preço Total: R$</label><input type="text" name="ttot" id="ctot" placeholder="Total a pagar" readonly></p>
+                    </fieldset>
+                    <input type="image" name="tenviar" src="_imagens/botao-enviar.png" alt="">
+                </form>
+            </article>
+        </section>
+        <footer id="rodape">
+            <p>Copyright&copy; 2019 - by Adriano Mendonça<br/>
+            <a href="http://facebook.com/adriano.brito.144" target="_blank">Facebook</a> | <a href="http://facebook.com/adriano.brito.144" target="_blank">Twitter</a></p>
+        </footer>
+    </div>
+</body>
+</html>
