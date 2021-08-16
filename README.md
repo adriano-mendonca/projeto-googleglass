@@ -1,2 +1,3 @@
-# html5-css3-cursoemvideo
- Meu site do google glass, material do curso de HTML5 e CSS3 do Curso em Vídeo. (Ainda não totalmente comentado)
+# Sita Google Glass
+Site desenvolvido durante o curso de HTML5 e CSS3 do canal [Curso em Vídeo](www.cursoemvideo.com)
+Extensão do projeto: tornar responsivo
